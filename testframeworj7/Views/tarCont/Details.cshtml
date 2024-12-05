@@ -1,0 +1,36 @@
+@model testframeworj7.Models.Tarifs
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Tarifs</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.datet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.datet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.prix)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.prix)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.typedechambres)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.typedechambres.typeID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.tarID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
